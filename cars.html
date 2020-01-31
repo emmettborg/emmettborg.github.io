@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+     
+        <!-- Metadata -->
+        <title> emmettborg - Cars</title>
+        <meta name="keywords" content="emmett,resume,python,simulation,discrete,event,dynamics,operations, research" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="Emmett Borg" />
+        <meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.1"" name="viewport" />
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="./css/layout2.css" />
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+
+        <!-- Custom font -->
+    	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+
+    </head>
+
+    <body>
+
+        <!-- Sidebar -->
+        <div id="navigation">
+        <h1> Emmett Borg </h1>
+            <a href="./index.html">About Me</a>
+            <a href="./resume.html">CV/Resum&eacute;</a>
+        <h1> Misc </h1>
+            <a href="./reading.html">Reading</a>
+            <a href="./cars.html">Cars</a>
+        </div>
+        <!-- Main Content -->
+        <div id="content">
+            <div style="float: right; margin: 24px;">
+                <p><small>2019-02</small></p>
+            </div>
+            <h1> Car Shopping on Kijiji </h1>
+            
+            <p>I am slightly addicted to online car shopping on <a href="https://www.kijiji.ca/cars">Kijiji</a>. It's fun to imagine myself owning a certain car, or hunting down a (<i>seemingly</i>) great deal.</p>
+            <p>
+            Kijiji is a free classifieds website where private sellers and dealers can post vehicles for sale. Some details are included in these ads such as the year, make, model, mileage, and price. Other useful information may also be in the free-text description. Most shoppers likely have a specific vehicle or budget in mind, and can filter through the thousands of ads. Looking through a long list of ads may be daunting for some shoppers though. Especially when looking for something like a Honda Civic or Toyota Corolla.
+            </p>
+            <p>
+             How does one know they found a good deal or not? Is it worth shopping at dealer or can you save money by going private? In general, I felt that Kijiji didn't provide insight into the overall marketplace.
+            </p>
+            <h2>1. Web Scraping </h2>
+            <p>
+             I built a web-scraping program in python to pull search results from a Kijiji. Essentially, it scrolls through each ad at a time while collecting key attributes. Now I have a table/database to work with. Keeping record of ads is also great for tracking price changes, and seeing which ads are taken down (assumed to have sold). 
+            </p>
+            <p>
+            Here are some high-level statistics of a 2012-2017 Honda Civic's for sale in the Greater Toronto Area. 
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>2012</th>
+                  <th>2013</th>
+                  <th>2014</th>
+                  <th>2015</th>
+                  <th>2016</th>
+                  <th>2017</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Price (mean)</th>
+                  <td>$7,937</td>
+                  <td>$9,439</td>
+                  <td>$11,335</td>
+                  <td>$13,178</td>
+                  <td>$16,048</td>
+                  <td>$18,048</td>
+                </tr>
+                <tr>
+                  <th>Mileage (mean)</th>
+                  <td>161,766</td>
+                  <td>129,270</td>
+                  <td>117,026</td>
+                  <td>87,163</td>
+                  <td>81,260</td>
+                  <td>58,824</td>
+                </tr>
+                <tr>
+                  <th>n</th>
+                  <td>89</td>
+                  <td>49</td>
+                  <td>68</td>
+                  <td>94</td>
+                  <td>69</td>
+                  <td>85</td>
+                </tr>
+              </tbody>
+            </table>
+            <center><img src="./images/civics_violin.png" alt="ViolinPlot_Civics" width="650" height="400"></center>
+			<p>
+			The image above is a <i>violin plot</i>. For each model year, it depicts the distribution of prices by seller type. 2012 and 2013 both show that private sellers tend to ask slightly less for a vehicle than a dealer does. If you are shopping for a newer vehicle however, the only option may be to buy from a dealer as the number of private listings dwindle.
+			</p>
+            <h2>2. Finding a Deal </h2>
+            <p>Key Considerations</p>
+            <ul>
+                <li><i>"All that glitters is not gold"</i>. A low price may be due to things like previous accidents, body damage, or required maintenance. </li>
+                <li>Vehicles may come in different "trims". A 2013 Honda Civic for example came in a DX, LX, EX, and Si which retailed for $15k, 18k, 20k, and 26k respectively. </li>
+                <li>Location may play a factor. Supply and demand in Toronto (pop: 3M) is much different than in Sudbury (&lt;200K). </li>
+            </ul>
+            <p>
+            Now with that said, let's look for a deal. 
+            </p>
+
+            
+            <br>
+        
+        </div>
+    </body>
+</html>
